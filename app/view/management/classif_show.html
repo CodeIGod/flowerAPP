@@ -1,0 +1,29 @@
+{include file='view/management/left_tmp.html'}
+<script src="{JS_PATH}classif_show.js"></script>
+    <div class="content">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>分类ID</th>
+                    <th>分类展示图片</th>
+                    <th>分类中文名称</th>
+                    <th>分类英文名称</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $data as $v}
+                <tr data-id="{$v['cid']}">
+                    <td class="active">{$v['cid']}</td>
+                    <td class="success"><img src="{$v['cthumb']}" class="img img-thumbnail" style="width: 150px;height: 50px;"></td>
+                    <td class="warning"><input type="text" value="{$v['cname']}" data-type="cname"></td>
+                    <td class="info"><input type="text" value="{$v['cenname']}" data-type="cenname"></td>
+                    <td class="danger"><button type="button" class="del btn btn-danger">删除</button></td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

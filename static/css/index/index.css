@@ -1,0 +1,150 @@
+
+nav{
+    width: 7.02rem;
+    height: 0.6rem;
+    background-color: #efefef;
+    border-radius: 1rem;
+    margin: 1.4rem auto 0.2rem;
+}
+nav>ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0.1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+nav>ul>li>a{
+    width: 1.71rem;
+    height: 0.56rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 0.24rem;  
+    font-weight: 600;
+    position: relative;
+}
+nav>ul>li>a>span{
+     position: absolute;
+     z-index: 500;
+     font-size: 0.24rem;  
+     font-weight: 900;
+     line-height: 0.51rem;
+     width: 1rem;
+     left: 0.38rem;
+}
+.write{
+    color: #fff!important;
+}
+.nav_frist {
+    position: absolute;
+    width: 1.88rem;
+    height: 0.56rem;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 1rem;
+    background-color: #ff7c81;
+    z-index: 100;
+    transition: all .5s;
+}
+.con{
+    margin-top: 0.08rem;
+    margin-bottom: 1.5rem;
+}
+.swiper-pagination>.swiper-pagination-bullet-active{
+    background: #fff;
+}
+.hot>.hot_title>img{
+    width: 4.36rem;
+    height: 0.73rem;
+    margin: 0.4rem auto ;
+}
+.hot_goodsB{
+    width: 5.84rem;
+    margin: 0 auto;
+}
+.ones{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+}
+.hot_goods{
+    width: 2.6rem;
+    height: 3.2rem;
+    border-radius: 0.12rem;
+    box-shadow: 0 0 0.2rem 0.04rem rgba(0,0,0,0.2);
+    border-bottom: 0.08rem solid #cb0b08;
+    overflow: hidden;
+}
+.hot_goods img{
+    width: 1.83rem;
+    height: 1.55rem;
+    margin: 0.2rem auto 0.1rem;
+}
+.hot_goods .bottom{
+    padding: 0 0.14rem ;
+}
+.hot_goods .xu{
+    border-top: 1px dotted #000000;
+    color: #ff4c53;
+    font-size: 0.24rem;
+}
+.hot_goods .bottom p:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+}
+.hot_goods .mon{
+    margin-top: 0.02rem;
+    margin-bottom: 0.06rem;
+}
+.hot_goods .mon span{
+    color: #313644;
+    font-size: 0.24rem;
+    font-weight: bold;
+}
+.hot_goods .bottom .reds{
+    color: #ff4c53;
+}
+.zan{
+    display: flex;
+    justify-content: space-between;
+}
+.zan i{
+    font-size: 0.18rem;
+    color: #4cae4c;
+}
+.zan span{
+    font-size: 0.18rem;
+    color: #b2b2b2;
+}
+.flow img{
+    width: 4.36rem;
+    height: 0.73rem;
+    margin: 0 auto 0.3rem;
+}
+.gu img{
+    width:7.02rem;
+    height: 2.08rem;
+}
+.gu{
+    position: relative;
+}
+.pos{
+    width: 7.02rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute ;
+    top: 0;
+    left: 0.24rem;
+    background-color: rgba(0,0,0,0.2);
+}
+.pos p{
+    padding: 0 0.2rem;
+    font-size: 0.22rem;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 0.2rem;
+}

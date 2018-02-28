@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H~花伊、/后台管理系统，欢迎您！</title>
+    <link rel="stylesheet" href="{CSS_PUB}bootstrap.min.css">
+    <link rel="stylesheet" href="{CSS_PUB}manage_base.css">
+    <link rel="stylesheet" href="{CSS_PATH}manage_index.css">
+    <script src="{JS_PUB}jquery.js"></script>
+    <script>
+        $(function () {
+            let btn = $('.m-left>h5');
+            btn.on('click', function () {
+                $(this).toggleClass('active').next('ul').slideToggle();
+            });
+            $('.m-left>ul>li>a').hover(function () {
+                $(this).closest('li').toggleClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="m-left">
+    <div class="hy-logo">
+        <img src="{IMG_PATH}" alt="" class="img-thumbnail">
+    </div>
+    <h5 class="">分类管理</h5>
+    <ul>
+        <li class=""><a href="/flowerApp/index.php/manage/view">添加</a></li>
+        <li><a href="/flowerApp/index.php/classif/view">展示</a></li>
+    </ul>
+    <h5 class="">商品管理</h5>
+    <ul>
+        <li class=""><a href="/flowerApp/index.php/goods/view">添加</a></li>
+        <li><a href="/flowerApp/index.php/goods/view">展示</a></li>
+    </ul>
+</div>
+<div class="m-right">
+    <div class="user-info">
+        <div class="info-l">
+            欢迎使用APP数据管理系统
+        </div>
+        <div class="info-r">
+            <i class="iconfont"></i>
+            <a href="">退出登陆</a>
+        </div>
+    </div>

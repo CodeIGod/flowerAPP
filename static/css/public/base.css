@@ -18,6 +18,8 @@
 ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6{
     list-style: none;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 img,a,input{
     display: block;
@@ -33,6 +35,10 @@ input{
     border: none;
 }
 a{
-    text-decoration: none;
     color: #000;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color: #ff91d2;
 }

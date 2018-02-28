@@ -1,0 +1,493 @@
+@import url('base.css');
+.top{
+	width: 100%;
+	height: 3.15rem;
+	background: red;
+	position: relative;
+}
+.top .left,.top .right,.eval .left,.eval .right{
+	display: block;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top: 0.7rem;
+	left: 0.3rem;
+	line-height: 0.5rem;
+	text-align: center;	
+}
+.iconfont{
+	color: #ff7c81;
+}
+.top .right,.eval .right{
+	right: 0.3rem;
+	left: calc(100% - 0.8rem);
+}
+.top .span1,.top .span2{
+	font-size: 0.34rem;
+	color: #fff;
+	position: absolute;
+	left: 0;
+	font-weight: 600;
+	right: 0;
+	top: 1.2rem;
+	margin:0 auto 0;
+	width: 1.3rem;
+}
+.top .span2{
+	top: 1.7rem;
+	width: 5.5rem;
+}
+.box1{
+	width: 4.65rem;
+	height: 2.73rem;
+ 	border: 1px solid rgba(0, 0, 0, 0.04); 
+	box-shadow: 0 0px 30px 1px rgba(0, 0, 0, 0.01) inset,0px 0px 10px 1px rgba(0, 0, 0, 0.03) ;
+	position: absolute;
+	top: -0.7rem;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+}
+.imgbox{
+	width: 5.1rem;
+	height: 2.5rem;
+	overflow: hidden;
+	position: relative;
+}
+.imgbox img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.box{
+	width: 5.1rem;
+	height: 2.5rem;
+	position: absolute;
+	top: -0.7rem;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+	box-shadow: 2px 0px 30px 1px rgba(0, 0, 0, 0.05);
+}
+.boss{
+	width: 100%;
+	background: #fff;
+	margin:0 auto ;
+	padding-top: 2.3rem;
+	position: relative;
+}
+.boss .p{
+	width: 5.1rem;
+	height: 0.7rem;
+	margin: 0 auto;
+}
+.p .p1{
+	float: left;
+	color: #83868c;
+	font-weight: 600;
+	line-height: 0.7rem;
+}
+.p .p2{
+	float: right;
+	color: #ff254e;
+	font-size: 0.36rem;
+	line-height: 0.7rem;
+	font-weight: 900;
+}
+.p .p2_1,.p .p2_2,.p .p2_3{
+	width: 1rem;
+	height: 0.36rem;
+	border-radius: 0.2rem;
+	margin-top: 0.15rem;
+	float: left;
+	margin-right: 0.18rem;
+	border: 1px solid #ff9c71;
+	font-weight: 600;
+	line-height: 0.38rem;
+	font-size: 0.24rem;
+	text-align: center;
+}
+.p .p2_2{
+	width: 1.6rem;
+	float: left;
+}
+.p .p2_3{
+	width: 0.35rem;
+	height: 0.3rem;
+	border-radius: 50%;
+	float: left;
+	line-height: 0.26rem;
+	font-weight: 900;
+	color: #ff5443;
+	font-size: 0.35rem;
+}
+.p2_1:last-of-type,.p2_3:last-of-type{
+	margin-right: 0;
+}
+.buy{
+	display: block;
+	width: 3rem;
+	height: 0.7rem;
+	margin: 0.5rem auto ;
+	border-radius: 0.3rem;
+	background: #ff5443;
+	text-align: center;
+	box-shadow: 0px 0px 20px 1px rgb(252, 200, 200);
+}
+.buy .span1{
+	font-weight: 600;
+	color: #fff;
+	font-size: 0.26rem;
+}
+.buy .span2{
+	font-weight: 600;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.2rem;
+	margin-top: -0.05rem;
+}
+.title{
+	width: 4.4rem;
+	height: 0.35rem;
+	margin: 0 auto 0.5rem;
+	padding-top: 0.35rem;
+	position: relative;
+}
+hr{
+	border: 1px solid #fccaaf;
+}
+.title_con{
+	width: 2.5rem;
+	height: 0.7rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto 0.5rem;
+	background: #fff;
+}
+.title_con .p1{
+	font-size: 0.22rem;
+	color: #fccaaf;
+	font-weight: 600;
+	text-align: center;
+	margin: -0.1rem;
+}
+.title_con .p2{
+	font-size:0.28rem;
+	color:#ff7c81;
+	font-weight: 600;
+	text-align: center;
+	margin: -0.1rem;
+}
+.title_con .p3{
+	font-size:0.28rem;
+	color:#ff151e;
+	font-weight: 600;
+	text-align: center;
+	margin: -0.1rem;
+}
+.xq{
+	width: 5.4rem;
+	height: 2.4rem;
+	margin: 0 auto 0.95rem;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.listnav{
+	width: 6.6rem;
+	margin: 0 auto 1.35rem;
+}
+.listnav .list{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 0.35rem;
+}
+.left,.right{
+	float: left;
+	width: 3.07rem;
+	height: 2.7rem;
+	overflow: hidden;
+}
+.right{
+	float: right;
+}
+.right .span1{
+	font-size: 0.26rem;
+	margin-top: 0.3rem;
+	color: #ff254e;
+	font-weight:600;
+}
+.right .span2{
+
+	font-size: 0.2rem;
+	color: #777;
+	font-weight:900;
+}
+.right p{
+	
+	font-size: 0.19rem;
+	line-height: 0.31rem;
+	color: #000;
+}
+
+.listnav .list:nth-of-type(2n) .left{
+	float: right;
+}
+.listnav .list:nth-of-type(2n) .right{
+	float: left;
+	text-align: right;
+}
+.footer{
+	width: 100%;
+	height: 1rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 50;
+	background: #ff9c71;
+	display: flex;
+	padding-left: 0.25rem;
+}
+.footer a{
+	display: block;
+	width: 1.75rem;
+	flex-wrap: nowrap;
+	text-align: center;
+	line-height: 1rem;
+}
+.footer a .iconfont{
+	font-size: 0.48rem;
+	color: #fff;
+}
+.footer a:nth-of-type(3) .iconfont{
+	font-size: 0.54rem;
+}
+.mask,.shop{
+	width:100% ;
+	height: 100%;
+	position: fixed;
+	top: 2.44rem;
+	bottom: 1rem;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	margin: 0 auto;
+	box-shadow: 0 0 0  3000px rgba(0, 0, 0, 0.5) inset;
+	transform: scale(0,0);
+	z-index: 500;
+	transition: all .5s;
+}
+.mask .list{
+	border-bottom:1px dashed #fff;
+	padding: 0.3rem 0.25rem 0.25rem;
+	overflow: hidden;
+}
+.list .head{
+	width: 0.73rem;
+	height: 0.73rem;
+	border:0.03rem solid #fff;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	margin-right: 0.2rem;
+}
+.head img{
+	width: 160%;
+	height: 160%;
+	position: absolute;
+	top: -30%;
+	left: -35%;
+}
+.hot{
+	background: #ff5443;
+	color: #fff;
+}
+.mask .list .span1,.mask .list .span3{
+	float: left;
+	width: 2.8rem;
+	font-size: 0.26rem;
+	font-weight: 600;
+	color: #fff;
+	margin-top: 0.03rem;
+} 
+.mask .list .span2{
+	font-weight: 500;
+	font-size: 0.2rem;
+	color: #fff;
+}
+.mask.list .span3{
+	width: auto!important;
+	font-weight: 400!important;
+	color: #ebe0e0!important;
+}
+.mask .list .i{
+	float: right;
+}
+.mask .list .i .iconfont{
+	margin-left:-0.11rem;
+	color: #ff435e;
+	font-size: 0.26rem;
+}
+.mask .list .img{
+	float: right;
+	overflow: hidden;
+}
+.mask .list .img img{
+	width: 2.2rem;
+	height: 1.43rem;
+	float: left;
+	margin-right: 0.2rem;
+}
+.error{
+	position: absolute;
+	bottom: 3.8rem;
+	left: 0;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	right: 0;
+	margin: 0 auto;
+	font-size: 0.4rem;
+	line-height: 0.45rem;
+	color: #fff;
+	z-index: 500;
+	text-align: center;
+	font-weight: 900;
+}
+.evaluate{
+	width: 4.5rem;
+	height: 0.68rem;
+	border-radius: 0.3rem;
+	background:#ff5443;
+	position: absolute;
+	bottom: 2.6rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 500;
+	font-size: 0.3rem;
+	font-weight: 600;
+	color: #fff;
+	line-height: 0.68rem;
+	text-align: center;
+}
+.shop img{
+	width:4.32rem;
+	height: 3.42rem;
+	position: absolute;
+	top: -3.5rem;
+	left:0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.eval{
+	width: 0;
+	height: 100%;
+	background: linear-gradient(to right,#fd5644 , #ff9a70); /* 标准的语法 */
+	position: fixed;
+	top: 0;
+	left:0;
+	bottom: 0;
+	margin:auto;
+	z-index: 999;
+	overflow: hidden;
+	transition: all .6s ;
+	opacity: 0;
+}
+.span{
+	font-size: 0.32rem;
+	color: #fff;
+	width: auto;
+	font-weight: 600;
+	text-align: center;
+	line-height: 1.9rem;
+}
+textarea{
+	display: block;
+	width: 6.8rem;
+	height: 6.2rem;
+	background: #fff;
+	border-radius:10px;
+	margin: 0 auto;
+	overflow: hidden;
+	outline: none;
+	color: #f64533;
+	font-weight: 600;
+	display: none;
+}
+.file{
+	width: 1.78rem;
+	height: 1.78rem;
+	background: #ebcb4c;
+	color: #fff;
+	border-radius: 5px;
+	position: absolute;
+	left: 7%;
+	bottom: 40.5%;
+}
+input[type='file'],.file .files{
+	position: absolute;
+	width: 0.74rem;
+	height: 0.4rem;
+	top: 0.48rem;
+	left: 0;
+	right: 0;
+	background:#f59023;
+	border-radius: 15px;
+	margin: 0 auto ;
+	text-align: center;
+}
+.files span{
+	font-size: 0.4rem;
+	color: #fff;
+	font-weight: 900;
+	line-height: 0.38rem;
+}
+.file p{
+	width: 0.9rem;
+	height: 0.8rem;
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	font-size: 0.14rem;
+	word-break:break-word;
+	color:rgba(255,255,255,0.9);
+	font-weight: 600;
+
+}
+.num{
+	position: absolute;
+	right: 7%;
+	bottom: 42.5%;
+	width: 1.5rem;
+	height: 0.5rem;
+}
+.num .num1,.num .num2,.num .num3{
+	font-size: 0.24rem;
+	font-weight: 600;
+	color: #ff5745;
+}
+.num .num2,.num .num3{
+	color: #000;
+}
+input[type='submit']{
+	width: 2.5rem;
+	height: 0.58rem;
+	color: #fff;
+	font-size: 0.3rem;
+	line-height: 0.58rem;
+	text-align: center;
+	background:#f64533;
+	border-radius: 0.8rem;
+	margin: 0.3rem auto;
+}
+/* .eval .left{
+	display: none;
+} */

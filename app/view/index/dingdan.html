@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,inifial-scale:1.0;maximum-scale=1.0,user-scalable=0">
+  <link rel="stylesheet" href="../../../static/iconfont/iconfont.css">
+  <link rel="stylesheet" href="../../../static/css/public/base.css">
+  <link rel="stylesheet" href="../../../static/css/index/header_fo.css">
+  <link rel="stylesheet" href="../../../static/css/index/dingdan.css">
+  <link rel="stylesheet" href="../../../static/css/public/swiper.min.css">
+  <script src="../../../static/js/public/rem.js"></script>
+  <script src="../../../static/js/public/jquery.js"></script>
+  <script src="../../../static/js/public/swiper.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back()" class="but"><i class="iconfont icon-address"></i></a>
+        <a href=""><img src="../../static/image/index/index_title_03.png" alt=""h>  </a>
+        <a href="" class="but"><i class="iconfont icon-sousuo"></i></a>
+    </header>
+    <nav>
+        <ul>
+            <div class="nav_frist"></div>
+            <li><a href="#"><span>全部</span></a></li>
+            <li><a href="#"><span>待付款</span></a></li>
+            <li><a href="#"><span>待收货</span></a></li>
+            <li><a href="#"><span>待评价</span></a></li>
+        </ul>
+    </nav>
+    <div class="con">
+        <div class="con_goods">
+            <p>2017-2-27 9:36</p>
+            <div class="goods_info">
+                <div class="left">
+                    <img src="../../static/image/index/goods_13.png" alt="">
+                    <span>魅力的花花</span>
+                </div>
+                <span>￥558.00</span>
+            </div>
+            <div class="com">
+                <div class="muliu">
+                    查看物流
+                </div>
+                <div class="heji">
+                    <p>共：<span>5</span>商品</p>
+                    <p>合计：<span>599999</span>元</p>
+                </div>
+            </div>
+        </div>
+        <div class="con_goods">
+            <p>2017-2-27 9:36</p>
+            <div class="goods_info">
+                <div class="left">
+                    <img src="../../static/image/index/goods_13.png" alt="">
+                    <span>魅力的花花</span>
+                </div>
+                <span>￥558.00</span>
+            </div>
+            <div class="com">
+                <div class="muliu">
+                    查看物流
+                </div>
+                <div class="heji">
+                    <p>共：<span>5</span>商品</p>
+                    <p>合计：<span>599999</span>元</p>
+                </div>
+            </div>
+        </div>
+   
+
+
+    </div>
+</body>
+</html>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+     let len = ($('nav a').length);
+    for(let i =0;i < len;i++){
+      $('nav a').eq(i).click(function(){
+        $('.nav_frist').css({transform:`translateX(${i*$(this).width()}px)`});
+         $(this).closest('li').siblings().children('a').children('span').removeClass('write');
+        $(this).children('span').addClass('write');
+
+      })
+    }
+</script>
