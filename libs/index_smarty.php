@@ -8,5 +8,12 @@ class index_smarty
         $this->smarty->setTemplateDir('app');
         $this->smarty->setCompileDir('compile');
     }
+    function checkLogin(){
+        session_start();
+        if(!$_SESSION['login']){
+            return false;
+        }
+        return true;
+    }
 
 }

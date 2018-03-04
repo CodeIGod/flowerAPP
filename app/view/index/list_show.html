@@ -1,108 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-	<meta charset="UTF-8">
-	<title>xiang qing</title>
-     <link rel="stylesheet" href="../../../static/css/public/base.css">
-	<link rel="stylesheet" type="text/css" href="../../../static/iconfont/iconfont.css">
-     <link rel="stylesheet" href="../../../static/css/index/header_fo.css">
-     <link rel="stylesheet" type="text/css" href="../../../static/css/index/list_show.css">
-     <script src="../../../static/js/public/rem.js"></script>
-     <script src="../../../static/js/public/jquery.js"></script>
-
-</head>
-<body>
-     <header>
-        <a href="javascript:history.back()" class="but"><i class="iconfont icon-address"></i></a>
-        <a href=""><img src="../../static/image/index/index_title_03.png" alt=""h>  </a>
-        <a href="" class="but"><i class="iconfont icon-sousuo"></i></a>
-    </header>
-     <a href=""><div class="huana1">
-          <div class="xq_tu">
-               <img src="../../static/image/dimage/huana1.png">
-          </div>
-          <div class="xq_zi">
-               <div class="xq_zm">婚礼手捧花<br>
-               <span>WEDDING FLOWER</span></div> 
-               <div class="xq_jiage">
-                    颜色：白粉<br>
-
-                    规格：12支装<br>
-
-                    价格:    <span>299</span>  <br>
-               </div>  
-          </div>
-          <a href="details.html">
-               <div class="xq_tyuan">商品详情</div>
-          </a>
-           <a href="">
-               <div class="xq_tyuan">更多</div>
-           </a>
-     </div></a>
-     <a href=""><div class="huana2">
-          <div class="xq_tu1">
-               <img src="../../static/image/dimage/huana2.png">
-          </div>
-            <div class="xq_zi">
-               <div class="xq_zm">情人节特惠<br>
-               <span>WEDDING FLOWER</span></div> 
-               <div class="xq_jiage">
-                    颜色：白<br>
-
-                    规格：100支装<br>
-
-                    价格:    <span>1314</span>  <br>
-               </div>  
-          </div>
-          <div class="xq_tyuan">商品详情</div>
-          <div class="xq_tyuan">更多</div>
-     </div></a>
-     <a href=""><div class="huana3">
-          <div class="xq_tu2">
-               <img src="../../static/image/dimage/huana3.png">
-          </div>
-            <div class="xq_zi">
-               <div class="xq_zm">白色花艺<br>
-               <span>WEDDING FLOWER</span></div> 
-               <div class="xq_jiage">
-                    颜色：白<br>
-
-                    规格：12支装<br>
-
-                    价格:    <span>299</span>  <br>
-               </div>  
-          </div>
-           <div class="xq_tyuan">商品详情</div>
-          <div class="xq_tyuan">更多</div>
-     </div></a>
-     <a href=""><div class="huana4">
-          <div class="xq_tu3">
-               <img src="../../static/image/dimage/huana4.png">
-          </div>
-            <div class="xq_zi">
-               <div class="xq_zm">混色搭配<br>
-               <span>WEDDING FLOWER</span></div> 
-               <div class="xq_jiage">
-                    颜色：白 粉红<br>
-
-                    规格：12支装<br>
-
-                    价格:    <span>299</span>  <br>
-               </div>  
-          </div>
-           <div class="xq_tyuan">商品详情</div>
-          <div class="xq_tyuan">更多</div>
-     </div></a>
-     <footer>
-        <a href="index.html" class=""><i class="iconfont icon-shouye"></i></a>
-        <a href="list.html" class="but_frist"><i class="iconfont icon-daohang"></i></a>
-        <a href=""><i class="iconfont icon-gouwuche"></i></a>
-        <a href="personal.html"><i class="iconfont icon-iconfontgerenzhongxin"></i></a>
-    </footer>
+{include file='view/index/header.html'}
+<link rel="stylesheet" href="{CSS_PATH}index/list_show.css">
+{foreach $data as $v}
+<a href="">
+    <div class="huana1">
+        <div class="xq_tu">
+            <img src="{$v['gthumb']}">
+        </div>
+        <div class="xq_zi">
+            <div class="xq_zm">{$v['gname']}<br>
+                <span>WEDDING FLOWER</span></div>
+            <div class="xq_jiage">
+                规格：
+                {assign var=foo value=explode(',',{$v['gspec']})}
+                {$foo[0]}
+                价格:    <span>{$v['gprice']}</span>
+            </div>
+        </div>
+        <a href="/flowerApp/index.php/details?gid={$v['gid']}">
+            <div class="xq_tyuan">商品详情</div>
+        </a>
+        <a href="">
+            <div class="xq_tyuan">更多</div>
+        </a>
+    </div>
+</a>
+{/foreach}
+<footer>
+    <a href="/flowerApp/index.php/index" ><i class="iconfont icon-shouye"></i></a>
+    <a href="/flowerApp/index.phpsts/index" class="but_frist"><i class="iconfont icon-daohang"></i></a>
+    <a href="/flowerApp/index.php/buy/index"><i class="iconfont icon-gouwuche"></i></a>
+    <a href="/flowerApp/index.php/person"><i class="iconfont icon-iconfontgerenzhongxin"></i></a>
+</footer>
 </body>
 </html>
-<script>  
-</script>
-
-

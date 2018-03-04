@@ -1,12 +1,20 @@
-
 nav{
+    position:fixed;
+    top:1rem;
+    left:0;
+    right:0;
+    z-index: 100;
+    width:100%;
+    /*height: 1rem;*/
+    background:#fff;
+}
+.navs{
     width: 7.02rem;
-    height: 0.6rem;
     background-color: #efefef;
     border-radius: 1rem;
-    margin: 1.4rem auto 0.2rem;
+    margin:0.1rem auto;
 }
-nav>ul{
+.navs>ul{
     height: 100%;
     display: flex;
     align-items: center;
@@ -14,7 +22,7 @@ nav>ul{
     box-sizing: border-box;
     position: relative;
 }
-nav>ul>li>a{
+.navs>ul>li>a{
     width: 1.71rem;
     height: 0.56rem;
     text-align: center;
@@ -23,14 +31,15 @@ nav>ul>li>a{
     font-weight: 600;
     position: relative;
 }
-nav>ul>li>a>span{
+.navs>ul>li>a>span{
      position: absolute;
      z-index: 500;
      font-size: 0.24rem;  
-     font-weight: 900;
-     line-height: 0.51rem;
-     width: 1rem;
+     font-weight: 600;
+     line-height: 0.56rem;
+     width: 1.1rem;
      left: 0.38rem;
+    letter-spacing: 1px;
 }
 .write{
     color: #fff!important;
@@ -49,8 +58,13 @@ nav>ul>li>a>span{
     transition: all .5s;
 }
 .con{
-    margin-top: 0.08rem;
+    margin-top: 1.7rem;
     margin-bottom: 1.5rem;
+    display: none;
+
+}
+.con.show{
+    display: block;
 }
 .swiper-pagination>.swiper-pagination-bullet-active{
     background: #fff;
@@ -58,16 +72,13 @@ nav>ul>li>a>span{
 .hot>.hot_title>img{
     width: 4.36rem;
     height: 0.73rem;
-    margin: 0.4rem auto ;
+    margin: 0.4rem auto 0 ;
 }
 .hot_goodsB{
     width: 5.84rem;
-    margin: 0 auto;
-}
-.ones{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.4rem;
+    margin: 0.4rem auto 0;
+    overflow: hidden;
+    padding: 0.1rem 0;
 }
 .hot_goods{
     width: 2.6rem;
@@ -76,6 +87,11 @@ nav>ul>li>a>span{
     box-shadow: 0 0 0.2rem 0.04rem rgba(0,0,0,0.2);
     border-bottom: 0.08rem solid #cb0b08;
     overflow: hidden;
+    float: left;
+    margin: 0 0.6rem 0.4rem 0 ;
+}
+.hot_goods:nth-child(2n){
+    margin: 0;
 }
 .hot_goods img{
     width: 1.83rem;
@@ -118,17 +134,20 @@ nav>ul>li>a>span{
     font-size: 0.18rem;
     color: #b2b2b2;
 }
+
+
 .flow img{
     width: 4.36rem;
     height: 0.73rem;
     margin: 0 auto 0.3rem;
 }
 .gu img{
-    width:7.02rem;
-    height: 2.08rem;
+    width:100%;
+    height: 100%;
 }
 .gu{
     position: relative;
+    padding:0 .2rem;
 }
 .pos{
     width: 7.02rem;
@@ -147,4 +166,25 @@ nav>ul>li>a>span{
     color: #ffffff;
     font-weight: bold;
     border-radius: 0.2rem;
+}
+.desc{
+    width: 7.02rem;
+    height: auto;
+    position: absolute;
+    top:1rem;
+    left:.24rem;
+}
+.desc > .name,.ename{
+    color: #fff;
+    text-align: center;
+
+    letter-spacing: 1px;
+}
+.desc > .name{
+    font-size: .34rem;
+    font-weight: 600;
+}
+.desc > .ename{
+    font-size: .24rem;
+    margin-top: .1rem;
 }

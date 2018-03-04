@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 2018-02-28 00:48:18
+-- Generation Time: 2018-02-28 07:23:32
 -- 服务器版本： 5.7.19
 -- PHP Version: 5.6.31
 
@@ -25,6 +25,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `activity`
+--
+
+DROP TABLE IF EXISTS `activity`;
+CREATE TABLE IF NOT EXISTS `activity` (
+  `aid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `aname` varchar(255) NOT NULL COMMENT '活动主题',
+  `abanner` varchar(255) NOT NULL COMMENT '活动banner图',
+  `aenname` varchar(255) NOT NULL COMMENT '活动英文主题',
+  `gid` varchar(255) NOT NULL COMMENT '商品ID',
+  PRIMARY KEY (`aid`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='活动版块';
+
+--
+-- 转存表中的数据 `activity`
+--
+
+INSERT INTO `activity` (`aid`, `aname`, `abanner`, `aenname`, `gid`) VALUES
+(2, '情人节狂欢！', '/flowerApp/static/upload/18-02-28/151980100232.png', 'Valentines ·day', '2,3,1');
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `classif`
 --
 
@@ -37,15 +60,6 @@ CREATE TABLE IF NOT EXISTS `classif` (
   `cthumb` varchar(255) NOT NULL,
   PRIMARY KEY (`cid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
---
--- 转存表中的数据 `classif`
---
-
-INSERT INTO `classif` (`cid`, `cname`, `cenname`, `pid`, `cthumb`) VALUES
-(3, '花艺', 'Flower art', 0, '/flowerApp/static/upload/18-02-27/1519744505196.png'),
-(4, '鲜花', 'Flowers', 0, '/flowerApp/static/upload/18-02-27/1519744566116.png'),
-(5, '盆栽', 'Potted', 0, '/flowerApp/static/upload/18-02-27/151974459918.png');
 
 -- --------------------------------------------------------
 
@@ -66,8 +80,16 @@ CREATE TABLE IF NOT EXISTS `goods` (
   `gimg` varchar(255) NOT NULL COMMENT '商品详情图',
   `cid` int(10) NOT NULL COMMENT '商品所属分类',
   `gprice` int(10) NOT NULL COMMENT '商品价格',
+  `aid` int(10) NOT NULL DEFAULT '0' COMMENT '活动ID，0：无活动',
   PRIMARY KEY (`gid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品';
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='商品';
+
+--
+-- 转存表中的数据 `goods`
+--
+
+INSERT INTO `goods` (`gid`, `gname`, `genname`, `gdesc`, `gpicture`, `gthumb`, `gslide`, `gspec`, `gimg`, `cid`, `gprice`, `aid`) VALUES
+(1, '粉玫瑰', 'Pink roses', '这是描述1^这是描述2^这是描述3^这是描述4', '/flowerApp/static/upload/18-02-28/15197824404.png,/flowerApp/static/upload/18-02-28/1519782440160.png,/flowerApp/static/upload/18-02-28/151978244047.png,/flowerApp/static/upload/18-02-28/1519782440161.png', '/flowerApp/static/upload/18-02-28/1519782424119.png', '/flowerApp/static/upload/18-02-28/151978215227.png,/flowerApp/static/upload/18-02-28/1519782152124.png,/flowerApp/static/upload/18-02-28/1519782152117.png,/flowerApp/static/upload/18-02-28/1519782152170.png', '2', '/flowerApp/static/upload/18-02-28/151978243357.png', 4, 199, 0);
 
 -- --------------------------------------------------------
 

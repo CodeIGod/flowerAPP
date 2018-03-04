@@ -16,6 +16,7 @@ define('ICON_PATH', '/flowerApp/static/iconfont/');
 define('FONT_PATH', __DIR__ . '/static/font/');
 ///////////
 include "libs/router.php";
+include "libs/page.php";
 include "libs/smarty/Smarty.class.php";
 include "libs/m_smarty.php";
 include "libs/index_smarty.php";

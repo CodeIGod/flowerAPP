@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{CSS_PUB}base.css">
+    <link rel="stylesheet" href="{ICON_PATH}iconfont.css">
+    <link rel="stylesheet" href="{CSS_PATH}index/p-info.css">
+    <script src="{JS_PUB}rem.js"></script>
+    <script src="{JS_PUB}jquery.js"></script>
+    <title>个人资料</title>
+</head>
+<body>
+<header>
+    <a class="back" href="/flowerApp/index.php/set">
+        <i class="iconfont icon-54"></i>
+    </a>
+    <h3>个人资料</h3>
+    <a href="" class="back"></a>
+</header>
+<div class="con">
+    <ul>
+        <li class="uimg">
+            <a href="javascript:void (0);">
+                <h4><i class="iconfont icon-geren2"></i>&nbsp;头像</h4>
+            </a>
+            <div class="imgBox"><img src="{$udata['upicture']}" alt="" class="img-circle"></div>
+        </li>
+        <li>
+            <a href="javascript:void (0);">
+                <h4><i class="iconfont icon-iconfontgerenzhongxin"></i>&nbsp;昵称</h4>
+            </a>
+            <input type="text" name="unickname" value="{$udata['unickname']}" class="input-info" title="用户昵称">
+        </li>
+        <li>
+            <a href="javascript:void (0);">
+                <h4><i class="iconfont icon-icon2"></i>&nbsp;生日</h4>
+            </a>
+            <input type="text" title="生日" value="{$udata['ubirthday']}" name="ubirthday">
+        </li>
+        <li>
+            <a href="javascript:void (0);">
+                <h4><i class="iconfont icon-xiaoxi"></i>&nbsp;性别</h4>
+            </a>
+            <select name="usex" id="" title="sex">
+                {$str}
+            </select>
+        </li>
+        <li>
+            <a href="javascript:void (0);">
+                <h4><i class="iconfont icon-xin"></i>&nbsp;手机号</h4>
+            </a>
+            <input type="tel" title="phone" name="utel" value="{$udata['utel']}">
+        </li>
+    </ul>
+</div>
+<div class="mask">
+    <ul>
+        <li><label for="camera">拍照上传</label><input id="camera" type="file" accept="image/*;capture=camera"></li>
+        <li><label for="localimg">选择本地相册</label><input id="localimg" type="file" accept="image/*" /></li>
+    </ul>
+    <div class="close">
+        <i class="iconfont icon-icon-arrow-left2"></i>
+    </div>
+</div>
+<div class="exit">
+    完成编辑
+</div>
+</body>
+</html>
+<script src="{JS_INDEX_PATH}p-info.js"></script>

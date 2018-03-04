@@ -34,7 +34,7 @@ class classif extends m_smarty
     {
         $data=$this->mysql->select("*");
         $this->smarty->assign('data',$data);
-        $this->smarty->display('view/management/classif_show.html');
+        $obj = new page('classif','classif_show.html','view');
     }
 
     function update()

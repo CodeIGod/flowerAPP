@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shou huo</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<link rel="stylesheet" href="{ICON_PATH}iconfont.css">
+	<link rel="stylesheet" href="{CSS_PATH}index/address.css">
+	<script src="{JS_PUB}rem.js"></script>
+	<script src="{JS_PUB}jquery.js"></script>
+	<script src="{JS_INDEX_PATH}address.js"></script>
+</head>
+<body>
+	<div class="header">
+		<a href="javascript:history.back()"><i class="iconfont icon-54"></i></a>
+		<span>收货地址</span>
+		<a href=""><div class="jia">+</div></a>
+	</div>
+	<div class="adr-list-wrap">
+		<ul>
+			<li data-ad_id="{$default['ad_id']}" class="active">
+				<div class="adrTop">
+					<div class="adr-name">{$default['ad_name']}</div>
+					<div class="adr-tel">{$default['ad_tel']}</div>
+					<div class="adr-status">[默认]</div>
+				</div>
+				<div class="adrBottom">
+					<div class="city">
+						{$default['ad_city']}
+					</div>
+					<div class="adress">
+						<span>详细地址：</span>{$default['ad_adress']}
+					</div>
+				</div>
+			</li>
+			{foreach $data as $v}
+			<li data-ad_id="{$v['ad_id']}">
+				<div class="adrTop">
+					<div class="adr-name">{$v['ad_name']}</div>
+					<div class="adr-tel">{$v['ad_tel']}</div>
+					<div class="adr-status"></div>
+				</div>
+				<div class="adrBottom">
+					<div class="city">
+						{$v['ad_city']}
+					</div>
+					<div class="adress">
+						<span>详细地址：</span>{$v['ad_adress']}
+					</div>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+	<div class="header2">
+		<a href="/flowerAPP/index.php/adrAdd/index"><span>添加新地址</span></a>
+	</div>
+</body>
+</html>

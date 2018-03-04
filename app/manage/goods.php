@@ -15,13 +15,37 @@ class goods extends m_smarty {
 
     ////////////功能区//////////////////
     function add(){
+        $row=$this->mysql->insert($_POST);
+        if ($row==1){
+            echo "success";
+        }else if($row<=0){
+            echo "error";
+        }
 
+    }
+    function show(){
+        $goods=$this->mysql->select("*");
+        $this->smarty->assign('goods',$goods);
+        $obj = new page('goods','goods_show.html','show');
     }
     function delete(){
-
+        $row=$this->mysql->delete("gid={$_POST['gid']}");
+        if($row==1){
+            echo 'success';
+            exit();
+        }else if($row<=0){
+            echo 'error';
+            exit();
+        }
     }
     function update(){
-
+        $row=$this->mysql->update("update goods set {$_POST['type']}='{$_POST['val']}' WHERE gid='{$_POST['gid']}'");
+        if ($row==1){
+            echo 'success';
+            exit();
+        }else if($row<=0){
+            echo 'fail';
+        }
     }
 
 }

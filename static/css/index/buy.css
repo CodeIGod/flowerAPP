@@ -1,4 +1,4 @@
-
+@import url('../public/base.css');
 header{
     width: 100%;
     height: 1.2rem;
@@ -27,17 +27,20 @@ header img{
 }
 header>.but>i{
     color: #ff7c81;
-    font-size: 0.3rem;
+    font-size: 0.36rem;
+
 }
 header >.header_title,.g_num{
     color: #fff;
     font-size: .4rem;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
-
+.but_frist {
+    background: #ff5645;
+}
 section{
-    padding: 1.6rem 0;
+    padding: 1.3rem 0;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -45,21 +48,20 @@ section{
 .item {
     width: 100%;
     height: auto;
+    padding: .1rem .3rem;
 }
 .item li {
-    width:6.8rem;
-    height: auto;
+    width:100%;
+    height: 100%;
     box-shadow: 0  0 25px 0 #cccccc;
     border-radius: 10px;
     margin: 0 auto .3rem;
     padding: .2rem 0;
     overflow: hidden;
     position: relative;
-
 }
 
 .item li > .choose {
-    background: url("/flowerApp/static/image/payImg/check_normal.png") center no-repeat;
     background-size: .4rem .4rem;
     width: 0.4rem;
     height: 1.8rem;
@@ -68,20 +70,19 @@ section{
 }
 .item  li .icon-dui{
     font-size: .6rem;
-    color:#ff9c71;
+    color: #d7d3ce;
     position: absolute;
     top:.8rem;
     left: .1rem;
-    display: none;
 }
 .item  li .icon-dui.show{
-    display: block;
+    color:#ff9c71;
 }
 
 .item li > a {
     display: block;
     width: 1.8rem;
-    height: 2rem;
+    height: 1.8rem;
     margin-right: .2rem;
     border: 1px solid #eee;
     background: rgba(140, 140, 140, 0.1);
@@ -90,34 +91,41 @@ section{
 }
 .item li > .con{
     width:auto;
-    height: auto;
+    height: 100%;
     float: left;
 }
 .item li > .con .name{
     font-size: .28rem;
-    letter-spacing: 2px;
-    font-family: '微软雅黑';
+    letter-spacing: 1px;
 }
-.item li > .con .ename{
+.item li > .con h3{
+    margin: 0 0 .1rem 0;
+}
+.item li > .con .ename i{
     font-size: .22rem;
-    margin-bottom: .2rem;
-    font-family: '微软雅黑';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8c8c8c;
 }
 .item li > .con p,span{
     font-size: .24rem;
-    letter-spacing: 2px;
-    font-family: '微软雅黑';
+    color: #525260;
+    line-height: .4rem;
+}
+.unit{
+    color: #bbbbbb;
 }
 .item li > .con strong{
-    color:#ff254e;
+    font-size: .26rem;
+    color: #ff6f60;
     font-weight: 600;
 }
 .item li > .num {
     width: auto;
-    height: auto;
+    height: 100%;
     float: left;
-    margin-left: .2rem;
-    margin-top: .7rem;
+    margin-top: .4rem;
+    margin-left: .4rem;
 }
 .item li > .num .del{
     border:2px solid #ff9c71;
@@ -146,22 +154,9 @@ section{
     text-align: center;
     line-height: .5rem;
     font-size: .28rem;
+    border-radius: 50%;
+    border: 1px solid #eeeeee;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 footer{
@@ -174,35 +169,43 @@ footer{
 .footer_one{
     width: 100%;
     overflow: hidden;
-    border-top: 1px solid #cccccc;
-    background:#FFCB91 ;
-    opacity: 0.8;
-    padding: .2rem;
+    background:#fef2e5;
+    padding: .1rem .2rem;
 }
 .footer_one .one_num{
     width: 70%;
     float: left;
+
 }
 .footer_one .one_num span{
-    font-size: .26rem;
+    font-size: .28rem;
+    color:#654c4ccc;
 }
 .footer_one .one_num strong{
-    /*font-size: .26rem;*/
     font-weight: 600;
 }
 .footer_one .one_num .totalNumber,.totalPrice{
     font-size: .3rem;
+    color:#ff9a64;
 
 }
 .footer_one .one_pay{
-    width: 30%;
+    width: 25%;
+    height: .8rem;
     float: left;
     text-align: center;
+    line-height: .8rem;
+    position: absolute;
+    top:-.32rem;
+    right:0.15rem;
+    background: #fef2e5;
+    border-radius:20px;
 }
 .footer_one .one_pay >a{
-    font-size: .3rem;
-    color: #333;
-    letter-spacing: 5px;
+    font-size: .32rem;
+    color: #ff9a64;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 .footer_two{
     height: 1rem;

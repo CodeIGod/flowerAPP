@@ -1,0 +1,29 @@
+{include file='view/management/left_tmp.html'}
+<script src="{JS_PATH}activity_show.js"></script>
+    <div class="content">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>活动ID</th>
+                    <th>活动主题</th>
+                    <th>活动主题英文</th>
+                    <th>活动Banner图</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $tos as $v}
+                <tr data-id="{$v['aid']}">
+                    <td class="active">{$v['aid']}</td>
+                    <td class="warning"><input type="text" value="{$v['aname']}" data-type="aname"></td>
+                    <td class="info"><input type="text" value="{$v['aenname']}" data-type="aenname"></td>
+                    <td class="success"><img src="{$v['abanner']}" class="img img-thumbnail" style="width: 150px;height: 50px;"></td>
+                    <td class="danger"><button type="button" class="del btn btn-danger">删除</button></td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

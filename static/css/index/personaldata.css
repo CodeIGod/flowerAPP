@@ -1,0 +1,17 @@
+header>h3{
+    font-size: 0.3rem;
+    color: #FFFFFF;
+
+}
+.baiyuan{
+     width: 0.34rem;
+     height: 0.34rem;
+     border:0.08rem solid #fff;
+     border-radius: 50%;
+     background-color: #fff;
+     line-height: 0.34rem;
+ }
+.iconfont{
+    color: #ff7c81;
+    font-size: 0.34rem;
+}

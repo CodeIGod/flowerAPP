@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-27 08:45:23
+/* Smarty version 3.1.30, created on 2018-02-28 02:22:15
   from "H:\wamp\wamp64\www\flowerApp\app\view\management\left_tmp.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a951aa3aec0f8_04666990',
+  'unifunc' => 'content_5a9612576b3cb7_46608060',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6b879c2fddf81254ecb4493ccd892008a633c31' => 
     array (
       0 => 'H:\\wamp\\wamp64\\www\\flowerApp\\app\\view\\management\\left_tmp.html',
-      1 => 1519720024,
+      1 => 1519783762,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a951aa3aec0f8_04666990 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a9612576b3cb7_46608060 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +65,12 @@ jquery.js"><?php echo '</script'; ?>
     <h5 class="">商品管理</h5>
     <ul>
         <li class=""><a href="/flowerApp/index.php/goods/view">添加</a></li>
-        <li><a href="/flowerApp/index.php/goods/view">展示</a></li>
+        <li><a href="/flowerApp/index.php/goods/show">展示</a></li>
+    </ul>
+    <h5 class="">活动管理</h5>
+    <ul>
+        <li class=""><a href="/flowerApp/index.php/activity/view">添加</a></li>
+        <li><a href="/flowerApp/index.php/activity/show">展示</a></li>
     </ul>
 </div>
 <div class="m-right">

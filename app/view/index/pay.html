@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta name="viewport" content="width=device-width,inifial-scale:1.0;maximum-scale=1.0,user-scalable=0">
-    <link rel="stylesheet" href="../../../static/css/public/base.css">
-    <link rel="stylesheet" href="../../../static/css/index/pay.css">
-    <link rel="stylesheet" href="../../../static/iconfont/iconfont.css">
-    <script src="../../../static/js/public/rem.js"></script>
-    <script src="../../../static/js/public/jquery.js"></script>
-    <script src="../../../static/iconfont/iconfont.js"></script>
-    <script src="../../static/js/templete/pay.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="{ICON_PATH}iconfont.css">
+    <link rel="stylesheet" href="{CSS_PATH}index/pay.css">
+    <script src="{JS_PUB}rem.js"></script>
+    <script src="{JS_PUB}jquery.js"></script>
+    <script src="{JS_INDEX_PATH}pay.js"></script>
 </head>
-<body class="bg-blur">
+<body>
 <header>
     <a href="javascript:history.back()" class="but"><i class="iconfont icon-54"></i></a>
     <h1 class="header_title">用户结算</h1>
-
 </header>
 <section>
     <div class="address">
-        <div class="adr_one">
-            <span class="name">张三</span>
-            <span class="tel">123456789</span>
+        <div class="zuo">
+            <div class="adr_one">
+                <span class="name">{$adr['ad_name']}</span>
+                <span class="tel">{$adr['ad_tel']}</span>
+            </div>
+            <div class="adr_two">
+                <p>{$adr['ad_city']}{$adr['ad_adress']}</p>
+            </div>
         </div>
-        <div class="adr_two">
-            <p>太原市小店区平阳路学府街口</p>
-        </div>
-        <a href="" class="you"><i class="iconfont icon-icon-arrow-right2"></i></a>
+
+        <a href="/flowerAPP/index.php/address/index" class="you"><i class="iconfont icon-icon-arrow-right2"></i></a>
     </div>
     <div class="pay">
         <ul class="isCheck">
@@ -56,31 +56,21 @@
     </div>
     <div class="goods">
         <ul>
+            {for $i=0 to count($goodsData)-1}
             <li class="choose">
                 <div class="box">
-                    <img src="../../static/image/payImg/pay_1.png" alt="">
+                    <img src="{$goodsData[$i]['gthumb']}" alt="">
                 </div>
                 <div class="title">
-                    <p>婚礼手捧花 白粉 <span>12</span>支装</p>
+                    <p>{$goodsData[$i]['gname']} <span>{$spec[$i]}</span>支装</p>
                 </div>
                 <div class="price">
-                    <div class="num">数量：<span class="goods_num">1</span></div>
-                    <div class="pri">价格：<span class="goods_price">299</span>元</div>
+                    <div class="num">数量：<span class="goods_num">{$num[$i]}</span></div>
+                    <div class="pri">价格：<span class="goods_price">{$goodsData[$i]['gprice']}</span>元</div>
 
                 </div>
             </li>
-            <li class="choose">
-                <div class="box">
-                    <img src="../../static/image/payImg/pay_2.png" alt="">
-                </div>
-                <div class="title">
-                    <p>婚礼手捧花 白粉 12支装</p>
-                </div>
-                <div class="price">
-                    <div class="num">数量：<span class="goods_num">1</span></div>
-                    <div class="pri">价格：<span class="goods_price">299</span>元</div>
-                </div>
-            </li>
+            {/for}
         </ul>
     </div>
 
@@ -96,8 +86,9 @@
             <span class="pp">共<span class="totalNumber">2</span>件 合计：</span>
             <strong class="totalPrice">799</strong><strong>元</strong>
         </div>
+
         <div class="p-pay">
-            <span class="buy">去付款</span>
+            <a href="" class="buy">去付款</a>
         </div>
     </div>
 

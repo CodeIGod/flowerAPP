@@ -1,229 +1,282 @@
-body{
+@import url('../public/base.css');
+
+body {
     background: url("../../image/payImg/bg.png") no-repeat;
-   background-size: 100%;
+    background-size: 100%;
 }
 
-header{
+header {
     width: 100%;
-    height: 1.2rem;
+    height: 1rem;
     background-color: #ff9c71b0;
     position: fixed;
     top: 0;
     left: 0;
-    padding:  0.2rem .3rem;
+    padding: 0 .3rem;
     box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-header>.but{
+
+header > .but {
     background-color: #fff;
     width: 0.47rem;
     height: 0.47rem;
     border-radius: 50%;
     text-align: center;
-    float: left;
-    margin-top: .2rem;
+    line-height: .47rem;
 }
-header>.but>i{
+
+header > .but > i {
     color: #ff7c81;
     font-size: 0.4rem;
     text-align: center;
     line-height: .47rem;
 }
-header >.header_title{
+
+header > .header_title {
+    width: calc(100% - .94rem);
+    line-height: 100%;
     color: #fff;
-    font-size: .4rem;
-    letter-spacing: 3px;
-    float: left;
+    font-size: .36rem;
     text-align: center;
-    margin-top: .15rem;
-    margin-left: 2.2rem;
 }
 
-section{
-    margin-top: 1.2rem;
+section {
+    margin-top: 1.1rem;
     width: auto;
 }
-.address{
-    background:#f9b4977d;
+
+.address {
+    background: #f9b4977d;
     padding: .3rem;
     height: auto;
-    position: relative;
-    border-bottom: 1px solid #cccccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.address>.adr_one{
+
+.address .zuo {
+    width: 92%;
+}
+
+.address .adr_one {
     margin-bottom: .1rem;
 }
-.address>.adr_one .name,.tel{
-   font-size: .32rem;
+
+.address .adr_one .name, .tel {
+    font-size: .32rem;
     font-weight: 600;
-    color:#333;
+    color: #333;
 }
-.address>.adr_two p{
+
+.address .adr_two p {
     font-size: .28rem;
-    color:#5d5c5c;
-    letter-spacing: 2px;
+    color: #5d5c5c;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-.address .you{
-    position: absolute;
-    bottom:.5rem;
-    right:.5rem;
+
+.address .you {
+    width: 8%;
+    height: 100%;
+    text-align: center;
 }
-.address .you i{
+
+.address .you i {
     font-size: .4rem;
-   color:#B4B4B4;
+    color: #ffffff70;
 }
-.pay{
+
+.pay {
     width: 100%;
     background: #f6c0a985;
+    margin-top: .1rem;
 }
-.pay ul{
+
+.pay ul {
     width: 100%;
     height: auto;
     overflow: hidden;
 }
-.pay ul li{
+
+.pay ul li {
     width: 6.5rem;
     height: 1rem;
     margin: 0 auto;
     border-bottom: 1px solid #ccc;
     position: relative;
 }
-.pay ul li .iconfont{
-   font-size: .6rem;
-    color:#ff9c71;
+
+.pay ul li:last-child {
+    border: 0;
+}
+
+.pay ul li .iconfont {
+    font-size: .6rem;
+    color: #ff9c71;
     position: absolute;
-    right:0;
-    bottom:.2rem;
+    right: 0;
+    bottom: .2rem;
     display: none;
 }
-.pay ul li .iconfont.show{
+
+.pay ul li .iconfont.show {
     display: block;
 }
-.pay ul .unchecked{
+
+.pay ul .unchecked {
     background: url("../../image/payImg/check_normal.png") 6rem 50% no-repeat;
-    background-size: .4rem .4rem; filter: drop-shadow(0px 0px 0px #A9A9A9);
+    background-size: .4rem .4rem;
+    filter: drop-shadow(0px 0px 0px #fff);
 
 }
-.pay ul li .weixin{
+
+.pay ul li .weixin {
     background: url(../../image/payImg/pay_wx.png) 0 50% no-repeat;
     background-size: .5rem .5rem;
     overflow: hidden;
 }
-.pay ul li .zhifubao{
+
+.pay ul li .zhifubao {
     background: url(../../image/payImg/pay_zfb2.png) 0 50% no-repeat;
     background-size: .5rem .5rem;
     overflow: hidden;
 }
-.pay ul li .yinlian{
+
+.pay ul li .yinlian {
     background: url(../../image/payImg/pay_yl1.png) 0 50% no-repeat;
     background-size: .5rem .5rem;
     overflow: hidden;
 }
-.pay ul li  span{
+
+.pay ul li span {
     float: left;
     line-height: 1rem;
 }
-.pay ul li  span:first-child{
+
+.pay ul li span:first-child {
     font-size: 0.28rem;
-    margin:0 .2rem 0 .8rem;
+    margin: 0 .2rem 0 .8rem;
 }
-.pay ul li  span:last-child{
+
+.pay ul li span:last-child {
     font-size: 0.24rem;
-    color:#8f8d8df7;
+    color: #8f8d8df7;
     letter-spacing: 1px;
 }
 
-.goods{
+.goods {
     width: 100%;
     height: auto;
     background: #f3c9b680;
+    margin-top: .1rem;
 }
-.goods ul{
+
+.goods ul {
     width: 100%;
     height: auto;
     overflow: hidden;
 }
-.goods ul li{
-    width: 6.5rem;
+
+.goods ul li {
+    width: 6.8rem;
     /*height: 1rem;*/
-    padding: .1rem  0;
+    padding: .1rem 0;
     margin: 0 auto;
-    border-bottom: 1px solid #7F7F7F;
+    border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: left;
     align-items: center;
     box-sizing: border-box;
 }
-.goods ul li .box{
+
+.goods ul li:last-child {
+    border: 0;
+}
+
+.goods ul li .box {
     width: .8rem;
     height: .8rem;
-    margin-right: .1rem;
+    margin-right: .2rem;
 }
-.goods ul li .title p{
+
+.goods ul li .title p {
     width: 4rem;
     font-size: .26rem;
 }
-.goods ul li .price .num,.pri ,span{
+
+.goods ul li .price .num, .pri, span {
     font-size: .26rem;
     letter-spacing: 1px;
 }
 
-
-
-
-footer{
+footer {
     width: 100%;
     position: fixed;
-    left:0;
+    left: 0;
     bottom: 0;
     border-top: 1px solid #e0e0e0;
     background: #ffffff;
 }
-.tips{
+
+.tips {
     width: 100%;
     background: #f3d3a59c;
     color: #b57842;
     padding: .12rem .2rem;
 }
-.tips p{
+
+.tips p {
     line-height: .3rem;
     font-size: .26rem;
 }
-.payment{
+
+.payment {
     height: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.payment .p-price{
+
+.payment .p-price {
     width: 50%;
     height: 100%;
     background: #ffffff;
 }
-.payment .p-price strong,.pp{
+
+.payment .p-price strong, .pp {
     display: block;
     float: left;
     font-size: .28rem;
     line-height: 1rem;
     color: #ff9c71;
 }
-.payment .p-price strong{
+
+.payment .p-price strong {
     font-weight: 600;
     font-size: .36rem;
 }
-.payment .p-price .totalNumber{
+
+.payment .p-price .totalNumber {
     color: #ff9c71;
     font-size: .36rem;
 }
-.payment .p-price .pp{
+
+.payment .p-price .pp {
     margin-left: 15%;
 }
-.payment .p-pay{
+
+.payment .p-pay {
     width: 50%;
     height: 100%;
     background: #ff9c71;
 }
-.payment .p-pay .buy{
+
+.payment .p-pay .buy {
     display: block;
     font-size: .3rem;
     color: #fff;

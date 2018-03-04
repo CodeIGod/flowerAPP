@@ -1,0 +1,108 @@
+
+nav{
+    width: 7.02rem;
+    background-color: #efefef;
+    border-radius: 1rem;
+    margin: 1.3rem auto 0.1rem;
+}
+nav>ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0.1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+nav>ul>li>a{
+    width: 1.71rem;
+    height: 0.56rem;
+    text-align: center;
+    line-height: 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.26rem;
+    font-weight: 600;
+    position: relative;
+}
+nav>ul>li>a>span{
+     position: absolute;
+     z-index: 500;
+     font-size: 0.24rem;  
+     font-weight: 900;
+     line-height: 0.51rem;
+     width: 1rem;
+     left: 0.38rem;
+}
+.write{
+    color: #fff!important;
+}
+.nav_frist {
+    position: absolute;
+    width: 1.88rem;
+    height: 0.56rem;
+    top: 0;
+    left: 0;
+    color: #fff;
+    border-radius: 1rem;
+    background-color: #ff7c81;
+    z-index: 100;
+    transition: all .5s;
+}
+.con{
+    box-shadow: 0 0 0.03rem 0.01rem rgba(0,0,0,0.2) ;
+    margin-top: 0.12rem;
+}
+.con_goods{
+    border-bottom: 0.04rem dotted #efefef ;
+    box-shadow: 0px 0px 30px 1px #e8e8e8;
+    margin-bottom: 0.24rem;
+}
+.con_goods:last-of-type{
+    border-bottom: none;
+}
+.con_goods>p{
+    padding-left: 0.32rem;
+    font-size: 0.28rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-bottom: 0.01rem solid #efefef;
+}
+.goods_info{
+    padding: 0 0.32rem;
+    height: 2.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.01rem solid #efefef;
+}
+.goods_info img{
+    width: 1.83rem;
+    height: 1.55rem;
+    border-radius: 0.1rem;
+    margin-right: 0.2rem;
+}
+.goods_info >.left{
+    display: flex;
+    align-items: center;
+}
+.goods_info>span{
+    color: #ff4c53;
+}
+.com{
+    padding: 0.12rem 0.32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.muliu{
+    border: 0.02rem solid #d3d3d3;
+    padding: 0.06rem;
+    font-size: 0.24rem;
+    color: #d3d3d3;
+}
+.heji{
+    display: flex;
+
+}
+.heji span{
+    color: #ff4c53;
+}

@@ -77,20 +77,52 @@ $(function () {
             });
         }
     });
-
+//////////////实拍图上传///////////////
+    $('#exampleInputPicFile').on('change',function () {
+        if ($('.picBox>.img-thumbnail').length!=0){
+            $('.picBox>.img-thumbnail').remove();
+        }
+        let files=this.files;
+        let str='';
+        let gpicture=$('.gpicture');
+        for (let i=0;i<files.length;i++){
+            let reader=new FileReader();
+            reader.readAsDataURL(files[i]);
+            reader.onload=function (e) {
+                $('<img>').attr('src',e.target.result).addClass('img-thumbnail').css({
+                    display:'block',width:'calc(100% / '+files.length+')',maxHeight:'100px',
+                }).appendTo('.picBox');
+            };
+            let formData=new FormData();
+            formData.append('file',files[i]);
+            $.ajax({
+                url:'/flowerApp/index.php/upload/index',
+                type:'post',
+                data:formData,
+                processData:false,
+                contentType:false,
+                success:function (data) {
+                    str+=data+',';
+                    if (i=files.length-1){
+                        let url=str.slice(0,-1);
+                        gpicture.attr('value',url);
+                    }
+                }
+            });
+        }
+    });
 
     $('button').on('click',function (e) {
         e.preventDefault();
         let formData=$('form').serialize();
         $.ajax({
-            url:'/profect/index.php/goods/add',
+            url:'/flowerApp/index.php/goods/add',
             type:'post',
             data:formData,
-            dataType:'json',
             success:function (data) {
-                if (data=='ok'){
+                if (data=='success'){
                     alert('上传成功！');
-                    location.href='/profect/index.php/goods/show';
+                    location.href='/flowerApp/index.php/goods/show';
                 }else if (data=='error'){
                     alert('上传失败！');
                 }

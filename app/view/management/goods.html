@@ -19,10 +19,12 @@
                 <input type="text" class="form-control" id="exampleInputPassword1" placeholder="GOODS-English-Name" name="genname">
             </div>
             <div class="form-group">
-                <label for="exampleInputSpec">商品规格</label>
-                <select class="form-control" id="exampleInputSpec" name="gspec">
-                    <option>1</option>
-                </select>
+                <label for="exampleInputPrice">商品价格</label>
+                <input type="text" class="form-control" id="exampleInputPrice" placeholder="GOODS-PRICE" name="gprice">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputSpec">商品规格(规格之间用逗号隔开【英文状态下】)</label>
+                <input type="text" class="form-control" id="exampleInputSpec" placeholder="规格" name="gspec">
             </div>
             <div class="form-group thumb">
                 <label for="exampleInputThumbFile">商品缩略图</label>
@@ -53,9 +55,8 @@
             <input type="hidden" name="gpicture" class="gpicture">
             <div class="form-group">
                 <label for="exampleInputDesc">商品实拍描述</label>
-                <input type="text" class="form-control" id="exampleInputDesc" placeholder="描述需与实拍图片一一对应(用 ^ 隔开)，否则页面无法正常显示" name="gdesc">
+                <textarea name="gdesc" id="exampleInputDesc" cols="30" rows="10" placeholder="描述需与实拍图片一一对应(用 ^ 隔开)，否则页面无法正常显示" class="form-control"></textarea>
             </div>
-            <input type="hidden" name="gthumb">
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>
